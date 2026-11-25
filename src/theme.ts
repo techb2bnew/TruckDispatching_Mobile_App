@@ -108,7 +108,7 @@ export const hue = (h: number) => `hsl(${h}, 65%, 45%)`;
 
 // ---- theme mode (system by default, toggle sets an explicit mode) ----
 type Mode = 'system' | 'light' | 'dark';
-let mode: Mode = 'system';
+let mode: Mode = 'light'; // default light, ThemeToggle se dark ho sakta hai
 const listeners = new Set<() => void>();
 const subscribe = (l: () => void) => (listeners.add(l), () => listeners.delete(l));
 
